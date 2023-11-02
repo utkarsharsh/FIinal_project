@@ -1,0 +1,97 @@
+
+.outerloginpage{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color:#606363; */
+    background-color: wheat;
+    
+/* width: 50%; */
+background-repeat: no-repeat;
+background-size: cover;
+    }
+
+.welcome{
+    height: 50px;
+    width: 300px;
+    border-top-left-radius:100% ;
+    border-top-right-radius:100% ;
+    background-color: rgb(61, 60, 60);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.welcome h1{
+    color: whitesmoke;
+}
+
+
+
+.innerloginpage{
+min-height: 80vh;
+display: flex;
+min-width: 80vw;
+justify-content: center;
+align-items: center;
+}
+.rightlogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+  height: 80vh;
+  border-bottom-right-radius:234px ;
+  /* background-color:  #6D9C99; */
+
+
+
+}
+.loginavbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FEB933;
+    
+    height: 65px;
+}
+
+
+.rightlogin input{
+outline: none;
+border-style: none;
+margin-top: 10px;
+width: 70%;
+/* background-color: #E9E4D6; */
+height: 43px;
+width: 80%;
+border-bottom:2px solid #FEB933;
+
+
+}
+.rightlogininner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    background-color: #FDFDFD
+}
+
+
+
+.leftlogin{
+height: 80vh;
+background-position-y: center;
+background-image: url("https://media4.giphy.com/avatars/greggunn/DLaiwtfzrZi4.png");
+
+width: 50%;
+background-repeat: no-repeat;
+background-size: cover;
+border-top-left-radius:234px ;
+}
