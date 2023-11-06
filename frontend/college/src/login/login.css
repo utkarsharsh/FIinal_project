@@ -61,6 +61,17 @@ align-items: center;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
 .rightlogin input{
 outline: none;
 border-style: none;
@@ -95,3 +106,74 @@ background-repeat: no-repeat;
 background-size: cover;
 border-top-left-radius:234px ;
 }
+.rightlogin button{
+
+margin-top: 8px;
+width: 8rem;
+height: 1.78rem;
+border-radius: 4px;
+color: #FDFDFD;
+border-style: none;
+background-color:  rgb(61, 60, 60);;
+
+}
+.rightlogin button:hover{
+
+cursor: pointer;
+transform: scale(1.1);
+
+transition: ease-in-out 0.5s;
+
+}
+.logincontrol{
+width: 80%;
+margin-top: 4px;
+margin-bottom: 7px;
+
+
+
+}
+.logincontrol p{
+    margin: 1px;
+
+}
+.logincontrol span{
+    border-bottom: 1px solid  #FEB933 ;
+}
+.logincontrol span:hover{
+cursor: pointer;
+
+}
+
+@media screen and (max-width: 740px) {
+   .leftlogin{
+    display: none;
+   }
+  }
+  @media screen and (max-width: 300px) {
+    .rightlogin{
+   width: 100%;
+
+    }
+    .rightlogininner{
+
+        width: 260px;
+    }
+    .welcome{
+        width: 260px;
+    }
+   }
+   @media screen and (max-width: 269px) {
+    .rightlogin{
+   width: 100%;
+
+    }
+    .rightlogininner{
+
+        width: 220px;
+    }
+    .welcome{
+        width: 220px;
+    }
+   }
+  

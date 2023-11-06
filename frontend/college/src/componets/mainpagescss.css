@@ -1,0 +1,389 @@
+.mainpagemaindiv{
+    background-color:whitesmoke;
+}
+
+
+.mainpagetop{
+   
+ height: 600px;
+   
+    perspective: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: gray;
+ 
+
+}
+.mainpagein{
+  height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:-1 ;
+    transition: ease-in-out 8s;
+    transform-style: preserve-3d;
+}
+
+
+
+ .forehead{
+    height: 100%;
+   
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    transform: translateZ(-5px) scale(1.5);
+}
+.background{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    /* filter: blur(1px); */
+    transform: translateZ(-5px) scale(2);
+}
+.mainpageinnavbar{
+    position: absolute;
+    top: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+}
+.mainpageinnavbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   gap: 6rem;
+    list-style: none;
+    color: rgb(0, 35, 71);
+}
+
+.maintext{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+position: absolute;
+top: 20%;
+left: 25%;
+text-align: center;
+
+    
+}
+.maintext button{
+    border-style: none;
+    border-radius: 4px;
+    background-color: #ffc107;
+    color:#343a40;
+    height: 35px;
+    width: 30%;
+    position: relative;
+}
+.maintext button:hover{
+    cursor: pointer;
+}
+.maintext p{
+    font-size: 30px;
+    color: rgb(0, 35, 71);
+    font-weight: 500;
+    text-align: center;
+}
+.maintext h1{
+    font-size: 48px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+
+
+.maincolleges{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+}
+.maincollegestop{
+    display: flex;
+    justify-content: center;
+align-items: center;
+gap: 2rem;
+}
+
+.maincollegestop img{
+
+width: 100%;
+height: 300px;
+
+
+}
+.maincollegestop img:hover{
+transform: scale(1.5);
+transition: ease-in-out 3s;
+
+
+}
+.akgecimgmain{
+    width: 100%;
+height: 300px;
+overflow: hidden;
+}
+.akgec{
+    display: block;
+    text-align: left;
+   background-color: #f8f9fa;
+   width: 25%;
+}
+.akgec button{
+    margin-top:  6px;
+    margin-bottom:4px;
+    margin-left: 6px;
+    border-style: none;
+    width: 6rem;
+    height: 2rem;
+    background-color: #343a40;
+    color: white;
+
+
+}
+.akgec h1{
+color: #343a40;
+margin-left: 9px;
+
+}
+.akgec p{
+    color: #343a40;
+    margin-left: 9px;
+    
+    }
+ .akgec button:hover{
+cursor: pointer;
+  }
+
+  .ourteam{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+
+  }
+  .mainpageheading{
+    margin-top: 50px;
+    margin-bottom:50px;
+  }
+
+
+
+
+.mainpageteam{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 50%;
+    transition: ease-in-out 4s;
+}
+.mainpageteam p{
+color: grey;
+}
+
+.mainpageteamcorousel{
+    transition: ease-in-out 4s;
+}
+
+
+
+
+
+.memberofthecollege{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #f8f9fa;
+    height: 400px;
+    background-color: #002347;
+}
+.motcl{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.passbenifit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.gettingnewupdates{
+text-align: center;
+width: 165px;
+height: 100px;
+border: 1px solid white;
+background-color: #334f6c;
+}
+.acessupcominginformationaboutsocity{
+    text-align: center;
+width: 195px;
+height: 100px;
+border: 1px solid white;
+background-color: #334f6c;
+}
+.forms{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 23px;
+
+}
+.forms input{
+    border-style: none;
+    width: 255px;
+    height: 32px;
+    border-radius: 3px;
+padding: 3px;
+outline: none;
+}
+.forms button{
+    border-style: none;
+    width: 107px;
+    height: 25px;
+    border-radius: 3px;
+padding: 3px;
+color: #343a40;
+font-weight: bold;
+outline: none;
+background-color: #ffc107;
+
+}
+.forms button:hover{
+    cursor: pointer;
+}
+
+.response{
+    display: none;
+}
+
+
+
+.mainfooter{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 600px;
+    background-color: #002347;
+}
+
+.mainfooterinput{
+    display: flex;
+ 
+    width: 80%;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 3rem;
+}
+.mainfooterinput0{
+    display: flex;
+    flex-direction: column;
+  
+}
+.mainfooterinput0 h2{
+    color: #f8f9fa;
+}
+.mainfooterinput0 p{
+    color: gray;
+    margin-top: 6px;
+}
+.mainfooterinput0 p:hover{
+    color: #f8f9fa;
+    cursor: pointer;
+}
+ .mainfooterinputsocial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+
+
+ @media screen and (max-width: 1150px){
+
+.maintext{
+    left: 20%;
+}
+
+
+ }
+ @media screen and (max-width: 1000px){
+
+    .maintext{
+        left: 15%;
+    }
+    
+    
+}     
+@media screen and (max-width: 1000px){
+
+    .maintext{
+        left: 10%;
+    }
+    
+    
+}
+@media screen and (max-width: 800px){
+
+    .maintext{
+        left: 10%;
+    }
+    .maincollegestop{
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+    }
+    .akgec{
+        width: 80%;
+    }
+    
+    
+    
+}
+@media screen and (max-width: 725px){
+
+    .maintext{
+        left: 10%;
+    }
+    .memberofthecollege{
+        flex-direction: column;
+    }
+    
+}
+@media screen and (max-width: 700px){
+.mainlist{
+    display: none;
+}
+  .response{
+    display: block;
+    margin-right: 6px;
+  }
+  .mainpageinnavbar{
+    justify-content: space-between;
+   
+  }
+  .mainpagelogo{
+    margin-left: 6px;
+  }
+  
+ 
+}
