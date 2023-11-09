@@ -1,0 +1,451 @@
+.suboodhoter{
+    display: block;
+background-color:white;
+/* background-color:#45474B; */
+/* color: white; */
+color: black;
+
+
+}
+.suboodhheader{
+display: flex;
+width: 100%;
+height: 100%;
+
+
+}
+.right{
+    width: 10%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow-y: hidden;
+}
+.left{
+  width: 10%;
+    position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    height: 100vh;
+    overflow-y: hidden;
+    
+}
+#suboodhboy {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+ animation-name: suboodh;  
+ animation-duration: 1s;
+ animation-iteration-count: infinite;
+ transition: ease-in-out 1s; 
+
+ 
+}
+.carousel{
+padding: 12px ;
+padding-right: 4px;
+
+width: 772px;
+}
+  
+
+  .secondsectionofimage::-webkit-scrollbar{
+    display: none;
+}
+.suboodhnavbarprofileimgavatar img{
+    width: 40px;
+    height: 40px;
+    
+}
+.suboodhnavbarprofileimgavatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 70px;
+    gap: 1.3rem;
+
+}
+
+.suboodhnewinfo{
+    position: relative;
+    margin-top: 23px;
+    align-items:center ;
+    display: flex;
+    margin-left: 30px;
+   width: 270px;
+height:50px;
+   /* background-color: #4681f4; */
+    border-radius: 12px;
+}
+.suboodhnewinfo h2{
+    color: #4681f4;
+    position: absolute;
+    left:8px;
+}
+
+
+.suboodhnewinfo img{
+    position: absolute;
+animation-name: suboodhnewinfo;
+animation-duration: 5s;
+animation-iteration-count: infinite;
+transition: ease-in-out ;
+
+width: 40px;
+    height: 40px;
+    
+}
+
+
+
+
+
+
+
+
+
+.mid{
+    height: 100vh;
+    overflow-y: scroll;
+    width: 100%;
+   
+
+
+}
+.mid::-webkit-scrollbar{
+    display: none;
+}
+@keyframes suboodhnewinfo{
+    0%{
+transform: rotate(0deg);
+right: 2px;
+    }
+    50%{
+        transform: rotate(360deg);
+        right: 2px;
+    }
+ 100%{
+    transform: rotate(0deg);
+    right: 2px;
+}
+
+}
+
+
+.shuboodhnavbar{
+display: flex;
+/* justify-content: center; */
+/* background-color:#FEB933 ; */
+/* background-color: #FFCC70; */
+/* background-color: #F875AA; */
+height: 90px;
+/* position: sticky;
+
+top: 0px; */
+width: 100%;
+z-index: 500000;
+padding-bottom: 4px;
+position: relative;
+border-bottom:1px dotted black ;
+align-items: center;
+
+
+}
+/* .shuboodhnavbar img{
+    width: 180px;
+    height: 50px;
+    margin-left: 77px;
+} */
+.suboodhdestination{
+    margin-left:75px;
+    background-color: #f3f0f0;
+    width: 300px;
+    height: 35px;
+    display: flex;
+    border-radius: 9px;
+    justify-content: center;
+    margin-top: 7px;
+    margin-bottom:7px ;
+    text-align: center;
+    align-items: center;
+    box-shadow: 10px 10px  5px  rgb(159, 154, 154);
+}
+
+
+
+
+
+
+.suboodhhouse{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom: 2px solid #FEB933 ; */
+    border-radius: 7px;
+    margin-top: 5px;
+    margin-left: 8px;
+    margin-right: 8px;
+   
+}
+.suboodhhouse p{
+font-size: 32px;
+margin-right: 6px;
+
+}
+.suboodhhouse h1{
+    margin-left: 6px;
+    
+}
+.suboodhinfo{
+    display: flex;
+    height: 400px;
+    overflow: hidden;
+    /* background-color: rgb(23, 22, 22); */
+}
+.secondsectionofimage{
+    width: 40%;
+background-color: white;
+  margin-left: 9px;
+  padding: 12px;
+  background-color: black;
+display: flex;
+justify-content: center;
+align-items: center;
+  margin-top: 24px;
+  flex-direction: column;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/38887998.jpg?k=14258e5aacd555b13029e07c40490eb6626bbd490813542372b0b14038d84ca9&o=");
+  overflow-y: auto;
+  
+}
+.secondsectionofimage img{
+    width: 650px;
+    height: 425px;
+}
+.suboodhnewinfofather{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.suboodhnewinfo1{
+    margin-right: 271px;
+}
+#fillingfast{
+    position: relative;
+    width: 226px;
+    height: 55px;
+    color:   white;
+    background-color:#4681f4 ;
+    border-radius: 4px;
+    border-style: none;
+    border:2px solid #FF6C22;
+
+}
+
+.suboodhinforight button{
+    background-color: #4681f4;
+    color: white;
+    width: 143px;
+    height: 2rem;
+    border-style: none;
+margin-left: 9px;
+margin-top: 40px;
+position: relative;
+}
+.btnani{
+    width: 5%;
+    height: 100%;
+    position: absolute;
+    z-index: 100000;
+    top: 0px;
+    background-color: white;
+    animation-name: btnani;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+    transform: rotate(4deg);
+}
+.suboodhinforight{
+    margin-top: 49px;
+   width: 100%;
+   height: 400px;
+
+ 
+  
+}
+
+.suboodhinforight p{
+
+}
+
+.suboodhinforight h1{
+   
+}
+.pricesuboodhandyouracountmood{
+    display: flex;
+
+
+}
+.realdetail{
+margin-left: 45px;
+
+}
+
+.suboodhnewinfo1 p{
+    margin: 0px;
+    margin-left: 40px;
+    color:rgb(130, 130, 130);
+
+}
+
+
+@keyframes btnani {
+    0%{
+top: 0px;
+left:0px;
+opacity: 0.2;
+
+    }
+    100%{
+        top: 0px;
+        left:95%;
+        opacity: 0.2;
+    }
+}
+.realdetail{
+    display: flex;
+    text-align: center;
+    
+    justify-content: space-evenly;
+    gap: 3rem;
+    margin-left: 90px;
+    width: 60%;
+    font-size: 1.5rem;
+    border-right: 1px dotted black;
+}
+.rent ,.Amenities ,.services{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+#schedulemetting{
+
+background-color: rgb(2, 152, 2);
+border-radius: 8px;
+width: 250px;
+height: 53px;
+margin-bottom: 30px;
+margin-top: 1px;
+
+
+}
+.yoursdetailforenquiry{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin-left: 34px;
+}
+.yoursdetailforenquiryinput{
+    display: flex;
+   gap: 2rem;
+   width: 100%;
+   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.yoursdetailforenquiryinput input{
+
+outline: none;
+border-style: none;
+padding: 5px;
+border-bottom:2px solid #B0D9B1;
+width: 100%;
+border-radius: 5px;
+
+
+}
+#yoursdetailforenquiryinputsubmit{
+    background-color: rgb(2, 152, 2)
+    ;
+    color: white;
+    height: 1.5rem;
+    width: 80%;
+}
+#yoursdetailforenquiryinputsubmit:hover
+{
+    cursor: pointer;
+    background-color: green;
+}
+
+
+
+
+
+
+
+.myreviewsetup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ padding: 13px;
+ width: 60%;
+ background-color: #83a9f6;
+ border-radius: 3px;
+}
+.reviewinfo{
+    display: flex;
+    flex-direction: column;
+    margin-left: 34px;
+}
+.profileinfo input{
+    width: 438px;
+    outline: none;
+    border-radius: 12px;
+    border-style: none;
+    height: 30px;
+    padding: 6px;
+}
+.avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#fileofreview{
+    width:82px;
+    /* background-color: #4681f4; */
+}
+.try{
+    position: relative;
+}
+.avatar img{
+    width: 60px;
+    height: 60px;
+    margin-right: 5px;
+
+}
+.suboodhyourreview{
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    /* align-items: center; */
+}
+.suboodhallreviews{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 63%;
+}
+.suboodhreviewright{
+width: 40%;
+background-color: black;
+height: 100%;
+
+}
