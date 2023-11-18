@@ -3,9 +3,34 @@ import './suboodh.css'
 import aniimg from './R-removebg-preview.png'
 import Suboodhreviews from './suboodhreviewcomponent';
 import { faWeight } from '@fortawesome/free-solid-svg-icons';
+import { useEffect, useRef, useState } from 'react';
+import axios from 'axios';
+
 
 function Suboodh(){
+ const [reviewdata,setreviewdata]=useState([ ]);
+ const [div,setdiv] = useState();
+    async function  getthereviewdata (){
+ let a=await axios.get("http://localhost:80/suboodh").then((response)=>{
+    response.data.map((e)=>{
+        setreviewdata((pre)=>{
+            return [...pre,...e.suboodhreviews]
+        });
+    })   
+ 
+    console.log(reviewdata)
+    
+ });
 
+
+}
+
+
+    useEffect(
+()=>{
+    getthereviewdata();
+},[]
+);
 
 return(<>
 <div className='suboodhoter'>
@@ -143,7 +168,16 @@ width:"20px",height:"20px",borderRadius:"50%",backgroundColor:"green",color:"whi
 <input type="name"  name='name'  placeholder='Your name'  />
 <input type="email" name='email'    placeholder='Your email' />
 <input type="number" name="number"     placeholder='Contact number' />
-<input style={{}} type='submit' id='yoursdetailforenquiryinputsubmit'/>
+<input style={{}} type='submit' id='yoursdetailforenquiryinputsubmit' onClick={()=>{
+document.querySelector(".yoursdetailforenquiryinput").style.display="none";
+let div=document.createElement('div');
+div.innerText="Thankyou for your support";
+
+div.style.color="green";
+div.style.fontSize="1.5rem"
+document.querySelector(".yoursdetailforenquiry").appendChild(div);
+
+}}/>
 </div>
 
 
@@ -156,7 +190,7 @@ width:"20px",height:"20px",borderRadius:"50%",backgroundColor:"green",color:"whi
 
 <div > <h1 style={{marginLeft:"30px", borderBottom:"2px dotted green"}}>Reviews</h1></div>
 <div className="suboodhyourreview">
-<div style={{width:"60%"}}>
+<div style={{width:"50%",display:"flex",alignItems:'center',justifyContent:"center",flexDirection:"column"}}>
 <div className="myreviewsetup">
 <div className="profileinfo">
     <div className="avatar">
@@ -180,15 +214,26 @@ width:"20px",height:"20px",borderRadius:"50%",backgroundColor:"green",color:"whi
 
 </div>
 <div className="suboodhallreviews">
-
-<Suboodhreviews/>
+{reviewdata.map((e)=>{
     
+    
+        return(
+            <Suboodhreviews  name={e.name} reviews={e.reviewstext} />
+        )
+
+       
+
+}
+)}
+
+
+
 
 </div>
 </div>
 
 <div className="suboodhreviewright">
-
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3155.0244926038904!2d77.50001419474371!3d28.675647594915006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf30885b1e2a5%3A0x9983675e24c6638b!2sAjay%20Kumar%20Garg%20Engineering%20College!5e0!3m2!1sen!2sin!4v1699667352982!5m2!1sen!2sin"          width="600" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"    style={{}}></iframe>
 </div>
 
 

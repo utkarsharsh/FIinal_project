@@ -1,0 +1,77 @@
+.profileofuserusers img{
+    height: 29px;
+    width: 35px;
+}
+.profileofuserright{
+height: 300px;
+width: 90%;
+padding: 23px;
+margin: 12px;
+position: relative;
+background-size: contain;
+background-clip: padding-box;
+    background-image: url();
+    overflow: hidden;
+    
+}
+.profileofuserrightimg{
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.profileofuserleftright{
+    display:flex;
+
+}
+.noprofileofuserrightimg{
+ display: none;
+    transition:ease-in-out 4s;
+}
+.profileofuserrighttop{
+    width: 100%;
+}
+
+.profileofuserrightavatar{
+   display:flex;
+ 
+   width: 100%;
+justify-content: center;
+align-items: center;
+}
+.profileofuserrightavatar div{
+    border-radius: 50%;
+    width: 100px;
+    height: 85px;
+    background-color:white;
+    position: absolute;
+    padding: 2px;
+}
+.profileofuserrightavatarinfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 27px;
+    width: 100%;
+}
+.profileofuserrightavatarinfo h2{
+    margin-bottom: 3px;
+}
+.profileofuserrightavatarinfo p{
+    margin-top: 0px;
+    color: rgb(154, 154, 154);
+}
+.profileofuserrightavatarinfo button{
+    border-style: none;
+    outline: none;
+    color: white;
+    position: relative;
+    
+    background-color: blueviolet;
+    width: 100px;
+    height: 23px;
+    border-radius: 4px;
+}

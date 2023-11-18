@@ -4,16 +4,22 @@ import viteLogo from '/vite.svg'
 import Login from './login/Login.jsx'
 import Mainpage from './componets/Mainpage.jsx'
 import { BrowserRouter, Routes,Route } from 'react-router-dom';
-import Suboodh from './componets/suboodh.jsx'
+import Suboodh from './componets/suboodh.jsx';
+import Profileofuser from './component2/profileuser.jsx'
+import Orginpage from './component2/Originalpage.jsx'
 function App() {
+
+
   return(
     <>
 
     <BrowserRouter>
     <Routes>
-    <Route path='/' element={<Login/>}/> 
+    <Route path='/' element={<Login/>}/>    
       <Route path='/Mainpage' element= {<Mainpage/>}/> 
       <Route path='/suboodh' element={<Suboodh/>}/>
+      <Route path='/origin' element={<Orginpage/>}/>
+      <Route path='/origin/:username' element={<Profileofuser/>}/>
       </Routes>
       </BrowserRouter>
     </>

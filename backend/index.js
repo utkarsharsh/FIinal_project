@@ -8,7 +8,7 @@ import multer from 'multer';
 import {v2 as cloudinary} from 'cloudinary';
 import  cors  from 'cors';
 import path from 'path';
-import Datastructure from "./schema.js";
+
 
 // import fileUpload from 'express-fileupload'
 const app=express();
@@ -21,8 +21,8 @@ dotenv.config();
 //cloudnary config..
 cloudinary.config({ 
     cloud_name: 'disggmk1g', 
-    api_key: process.env.apikey, 
-    api_secret: process.env.apisecret,
+    api_key: "362658237867212", 
+    api_secret: "_sNWAP6yzzCz3ZLbYgA_HEx7Gls",
   });
       //
 
@@ -43,6 +43,7 @@ useroriginalname:String,
     suboodhreviews  : [{
     reviewstext: String,
     reviewurl: String,
+    names:String,
 }],
 suboodhrating:Number,
  
@@ -54,6 +55,7 @@ suboodhrating:Number,
         reviews : [{
             reviewstext: String,
             reviewurl: String,
+            name:String,
         }],
          
         
@@ -78,29 +80,32 @@ suboodhrating:Number,
                          
                         
                             },
-    others:[
-        {
+    others:
+        [{
+            name: String,
+            identity:String,
             caption:String,
-            place:String,
-            eventurl: String,
-        }
-    ]
+            
+            eventurl : String,
+           
+        }]
+    
   
   });
 
 //multer
-// var storage = multer.diskStorage({
-//     destination: (req, file, cb) => {
-//         cb(null, './uploads')
-//     },
-//     filename: (req, file, cb) => {
+var storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, './backend/uploads')
+    },
+    filename: (req, file, cb) => {
        
-//         console.log(file);
-//         cb(null, file.originalname + '-' + Date.now());
-//     }
-// });
+        console.log(file);
+        cb(null, file.originalname + '-' + Date.now());
+    }
+});
 
-// var upload = multer({ storage: storage });
+var upload = multer({ storage: storage });
 
 
 
@@ -205,18 +210,18 @@ else{
  let totaluser= await userinfo.find();
     // console.log(totaluser);    
 
-app.get("/home", async (req,res)=>{
+app.get("/origin", async (req,res)=>{
     console.log(req.headers);
-    let token=req.headers.authorization;
+    let token=req.headers.authorization;+
 
 console.log(token);
-if(token=="Bearer abcc"){
+if(token==null){
     res.send("nobro");
     console.log("m");
 }
-else{
+else {
     token=token.split(" ");
-    const verified = jwt.verify(token[1], jwtSecretKey); 
+    const verified = jwt.verify(token[1], "KEH_DO_TUMHE_YA_CHUP_RAHU"); 
     let currentuser= await userinfo.findOne({_id: verified.id})
     if(verified){
 
@@ -233,15 +238,40 @@ else{
 });
 
 
+app.post("/others" , upload.single('image' ), async (req,res)=>{
+    let eventurl="";
+    console.log(req.file);
+    await cloudinary.uploader.upload(req.file.path,
+        { public_id:req.body.name },function  (error,result){
+           
+            eventurl=result.url;
+        });
+ await userinfo.findOneAndUpdate(req.body.username, {$push : {others:{
+name:req.body.name,
+ eventurl : eventurl,
+ caption: req.body.caption,}
+ }})
+ console.log(eventurl);}
+)
+
 
 
 app.get("/suboodh",async(req,res)=> {
-
     let totaluser= await userinfo.find();
-res.send(totaluser);
+   let p=[];
+ totaluser.map((e)=>{
+    console.log(e.suboodhreviews.length);
+if(e.suboodhreviews.length != 0){
+    p.push(e);
+}
+
+}
 
 
-})
+)
+
+res.send(p);
+});
 
 
 app.post("/suboodh",async(req,res)=> {
@@ -251,9 +281,13 @@ app.post("/suboodh",async(req,res)=> {
         suboodhreviews:{
             reviewstext: req.body.reviewstext,
             reviewurl: "jai ho",
+            names:req.body.name,
         }
     },
-      });
+      }).then((response)=>{
+        console.log(response);
+      })
+     
       const user2= await userinfo.findOneAndUpdate({name:req.body.name}, {
     
         suboodhrating:req.body.rating,
