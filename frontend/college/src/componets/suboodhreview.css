@@ -2,10 +2,10 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: #83a9f6;
-    background-color: #83a9f6;
+    
+    background-color: #e7ecf6;
     padding: 5px;
-    color: white;
+    color: rgb(100, 99, 99);
    
     margin-top: 20px;
 }
@@ -31,14 +31,17 @@ margin-left: 40px;
 }
 .suboodhimagereview{
 display: flex;
-justify-content: center;
+
 align-items: center;
 width: 100%;
 
 }
+
 .suboodhimagereview img{
-    width: 300px;
-    height: 300px; 
+   min-width: 261px;
+   min-height: 300px; 
+   max-height: 400px;
+   
 }
 .suboodhcaptions{
     margin-left: 23px;

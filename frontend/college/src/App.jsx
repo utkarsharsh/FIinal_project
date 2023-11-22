@@ -7,6 +7,7 @@ import { BrowserRouter, Routes,Route } from 'react-router-dom';
 import Suboodh from './componets/suboodh.jsx';
 import Profileofuser from './component2/profileuser.jsx'
 import Orginpage from './component2/Originalpage.jsx'
+import Chatapp from './component2/chatapp.jsx'
 function App() {
 
 
@@ -15,7 +16,8 @@ function App() {
 
     <BrowserRouter>
     <Routes>
-    <Route path='/' element={<Login/>}/>    
+    <Route path='/' element={<Login/>}/>
+    <Route path='/chat/:id' element={<Chatapp/>}/>
       <Route path='/Mainpage' element= {<Mainpage/>}/> 
       <Route path='/suboodh' element={<Suboodh/>}/>
       <Route path='/origin' element={<Orginpage/>}/>

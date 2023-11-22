@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import './mainpagescss.css'
+
 import Typed from "typed.js";
 import {  useRef } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
@@ -10,6 +11,7 @@ import { faEnvelope,faBars } from '@fortawesome/free-solid-svg-icons'
 
 
 import {useTypewriter} from 'react-simple-typewriter'
+import { Link } from "react-router-dom";
  function  Mainpage (){
 
     const el = useRef(null);
@@ -77,7 +79,7 @@ return(
 <div className="response">
     <span><FontAwesomeIcon icon={faBars} /></span>
 </div>
-<div className="responsemenu">
+<div className="responsemenu" style={{display:"none"}}>
 <ul>
     <li>Home</li>
     <li>About</li>
@@ -113,9 +115,11 @@ return(
 
 <div className="akgec"> <div className="akgecimgmain"><img src="https://infoadmission.com/wp-content/uploads/2023/05/ajay-kumar-garg-750x375-1.jpg" alt="" />
 </div>
+<Link to="/origin">
 <button>
     Review it
 </button>
+</Link>
 <div className="akgectext">
     <h1>Akgec</h1>
     <p>Akgec has <span ref={el}>  </span></p>
@@ -162,7 +166,7 @@ return(
     <Carousel autoPlay infiniteLoop interval={4000}  centerMode transitionTime={2000} className="mainpageteamcorousel">
         <div className="tanishq">
             <div className="tanishqimg">
-             
+             <img src="https://thumbs.dreamstime.com/b/handsome-young-student-background-manager-business-center-87484088.jpg"></img>
             </div>
             <div className="tanishqabout">
 <h1>Tanishq</h1>
@@ -175,7 +179,7 @@ return(
         </div>
         <div className="rajmishra">
  <div className="tanishqimg">
-
+<img src="https://th.bing.com/th/id/R.541a93971e3980b1b4e018f2fa0263e4?rik=21xM2ERwBtQ%2bDA&riu=http%3a%2f%2f2.bp.blogspot.com%2f_XLBleeqLegk%2fTK9h7OaQirI%2fAAAAAAAAAKk%2fWIJfq9_-Xio%2fs1600%2fiStock_000008800503Small.jpg&ehk=H9weVQGs4f%2bSyY6SksgwyXsMRhlnRuZ00%2fC8wFPtNbE%3d&risl=&pid=ImgRaw&r=0"></img>
             </div>
             <div className="tanishqabout">
             <h1>Rajmishra</h1>
@@ -187,7 +191,7 @@ return(
         </div>
         <div className="shreyansh">
         <div className="tanishqimg">
-
+<img src="https://cdn.pixabay.com/photo/2016/03/10/07/10/advertising-1247947_960_720.jpg"></img>
 </div>
 <div className="tanishqabout">
 

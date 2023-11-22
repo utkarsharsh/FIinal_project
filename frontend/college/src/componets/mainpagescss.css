@@ -1,7 +1,9 @@
 .mainpagemaindiv{
     background-color:whitesmoke;
 }
-
+.mainpagemaindiv::-webkit-scrollbar {
+    display: none;
+  }
 
 .mainpagetop{
    
@@ -10,10 +12,14 @@
     perspective: 5px;
     overflow-x: hidden;
     overflow-y: auto;
-    background-color: gray;
+    
  
 
 }
+tanishqimg
+.mainpagetop::-webkit-scrollbar {
+    display: none;
+  }
 .mainpagein{
   height: 100%;
     position: relative;
@@ -186,8 +192,9 @@ text-align: center;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    width: 50%;
+    width: 90%;
     transition: ease-in-out 4s;
+    overflow: hidden;
 }
 .mainpageteam p{
 color: grey;
@@ -195,6 +202,7 @@ color: grey;
 
 .mainpageteamcorousel{
     transition: ease-in-out 4s;
+    width: 100%
 }
 
 
@@ -206,7 +214,7 @@ color: grey;
     justify-content: space-around;
     align-items: center;
     color: #f8f9fa;
-    height: 400px;
+    min-height: 400px;
     background-color: #002347;
 }
 .motcl{
@@ -280,10 +288,10 @@ background-color: #ffc107;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 600px;
+    
     background-color: #002347;
 }
-
+.mainpageteam
 .mainfooterinput{
     display: flex;
  
@@ -317,7 +325,11 @@ background-color: #ffc107;
     flex-direction: column;
  }
 
-
+ @media screen and (min-width: 1150px){
+    .mainpageteamcorousel{
+        width: 80%;
+    }
+ }
  @media screen and (max-width: 1150px){
 
 .maintext{
@@ -369,6 +381,10 @@ background-color: #ffc107;
     }
     
 }
+
+
+
+
 @media screen and (max-width: 700px){
 .mainlist{
     display: none;
@@ -387,3 +403,35 @@ background-color: #ffc107;
   
  
 }
+@media screen and (max-width: 490px){
+    .maincollegestop {
+width: 100%;
+
+    }
+    .akgec {
+        width: 100%;
+    }
+    .passbenifit{flex-direction: column;}
+    .gettingnewupdates{
+        margin-bottom: 12px;
+    }
+
+}
+
+@media screen and (max-width: 309px){
+.forms input{
+    width: 95%;
+}
+}
+
+.tanishqimg img{
+    width: 0px;
+    height: 450px;
+    }
+    .mainfooterinput{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+    }

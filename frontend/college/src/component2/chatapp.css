@@ -1,0 +1,150 @@
+.chattingkro{
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #435585;
+
+
+}
+.chatsetter{
+    height: 80%;
+    width: 80%;
+    display: flex;
+ 
+    gap: 1rem;
+    
+}
+.chatsetterleft{
+    width: 20%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #363062;
+
+}
+.chatsetterleft::-webkit-scrollbar {
+    display: none;
+  }
+.chatsetterleft img{
+    width: 40px;
+    height: 38px;
+    margin-left: 12px;
+    border-radius: 50%;
+
+}
+.chatsetterleft h2{
+    text-align: center;
+    color: White;
+}
+.chatsetterright{
+    width: 80%;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    position: relative;
+}
+.chatsetterrighttop{
+    display: flex;
+align-items: center;
+background-color: #99a7ce;
+}
+
+.chatsetterrighttop img{
+    width: 44px;
+    height: 40px;
+    margin: 5px;
+    
+}
+.chatsetterrighttop h5{
+color: white;
+font-size: 1rem;
+margin-left: 4px;
+}
+
+
+.chatindbox{
+    height: 100%;
+    background-color: #363062;
+    display: flex;
+flex-direction: column;
+overflow-y: auto;
+}
+
+.chatindbox::-webkit-scrollbar {
+    display: none;
+  }
+
+.chatmessagesender{
+    display: flex;
+    /* position: absolute;
+    bottom: 10px; */
+}
+.chatmessagesender input{
+width: 90%;
+height: 40px;
+outline: none;
+/* color: darkgray; */
+
+border-style: none;
+padding: 3px;
+}
+.chatmessagesender button
+{
+width: 10%;
+color: white;
+background-color:#99a7ce;
+outline: none;
+border-style: none;
+cursor: pointer;
+}
+.alsochat{
+    display: flex;
+    align-items: center;
+    margin: 4px;
+    background-color: #99a7ce;
+    border-radius: 6px;
+    color: white;
+    overflow-x: hidden;
+
+   
+}
+.alsochat p{
+    margin-left: 20px;
+}
+.alsochat{
+    cursor: pointer;
+}
+.allthemessageown{
+   display: flex;
+   padding: 4px;
+   align-items: center;
+  
+}
+.allthemessageother{
+    display: flex;
+    padding: 4px;
+   justify-content: flex-end;
+   align-items: center;
+}
+.allthemessageown p{
+   
+    color: white;
+   
+    margin: 4px;
+
+}
+.allthemessageother p{
+   
+    color: white;
+    
+    margin: 4px;
+}
+
+.chatindbox img{
+    width: 23px;
+    height: 20px;
+    border-radius: 50%;
+}
+.chatsetterrighttop img{
+border-radius: 50%;
+}
