@@ -17,20 +17,53 @@ function Suboodh(){
             return [...pre,...e.suboodhreviews]
         });
     })   
- 
-    console.log(reviewdata)
-    
+
+
  });
 
 
 }
+const [thisuser,setthisuser]=useState({});
+const [yoursthought,setyourthought]= useState("");
+const [yourimage,setyourimage]=useState("");
+async function postsuboodh(){
+let form= new FormData();
+form.append('image',yourimage);
+form.append('reviewstext',yoursthought);
+form.append('name',thisuser.name);
+let output=await axios.post("http://localhost/suboodh",form,{
+    
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+});
+if(output.data=="done"){
+    alert("reviwed");
+}
 
+}
 
     useEffect(
 ()=>{
     getthereviewdata();
 },[]
 );
+async function gettheralluserorigin() {
+    let token = localStorage.getItem("token");
+    let ans = await axios.get("http://localhost/origin", {
+      headers: {
+        authorization: "Bearer" + " " + token,
+      },
+    });
+    console.log(ans);
+   
+    setthisuser(ans.data.currentusers);
+    console.log(thisuser);
+  }
+  useEffect(() => {
+    gettheralluserorigin();
+    
+  }, []);
 
 return(<>
 <div className='suboodhoter'>
@@ -54,7 +87,7 @@ return(<>
     <p>Ghaziabad, Delhi </p>
 </div>
 <div className="suboodhnavbarprofileimgavatar">
-    <p>Utkarsh upadhyay</p>
+    <p>{thisuser.name}</p>
     <img src='https://cdn-icons-png.flaticon.com/512/2919/2919906.png'></img>
 </div>
 
@@ -197,7 +230,9 @@ document.querySelector(".yoursdetailforenquiry").appendChild(div);
 <div className="profileinfo">
     <div className="avatar">
 <img src='https://cdn-icons-png.flaticon.com/512/2919/2919906.png'></img>
-<input type= "text" name="" placeholder="Your thoughts"/>
+<input type= "text" name="" placeholder="Your thoughts"  value={yoursthought} onChange={(e)=>{
+   setyourthought(e.target.value);
+}} />
     </div>
     
 </div>
@@ -206,8 +241,10 @@ document.querySelector(".yoursdetailforenquiry").appendChild(div);
 <div className="filesubmit" style={{display:'flex'}}>
 <div className='try'>
    
-    <input type="file"  id="fileofreview" /> </div>
-<button>Post</button>
+    <input type="file"  id="fileofreview"  onChange={(e)=>{
+        setyourimage(e.target.files[0]);
+    }}/> </div>
+<button onClick={postsuboodh}>Post</button>
 </div>
 
 </div>
@@ -216,16 +253,12 @@ document.querySelector(".yoursdetailforenquiry").appendChild(div);
 
 </div>
 <div className="suboodhallreviews">
-{reviewdata.map((e)=>{
-    
-    
+{reviewdata.map((e)=>{  
         return(
-            <Suboodhreviews  name={e.name} reviews={e.reviewstext} />
+            <Suboodhreviews  name={e.names} reviews={e.reviewstext} reviewsurl={e.reviewurl}  />
         )
-
-       
-
 }
+
 )}
 
 

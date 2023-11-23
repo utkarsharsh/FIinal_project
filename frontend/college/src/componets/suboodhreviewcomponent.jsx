@@ -5,8 +5,14 @@ function Suboodhreviews(prop){
    
     
 console.log(prop);
+if(!prop.name || !prop.reviewsurl || prop.reviewsurl=="" || prop.reviewsurl == "jai ho"){
+    //maine kuch image ka url backend mein jaiho rakha tha isliye diikat aa rhi thi
+    // backend se jai ho hatana hai ..yad se  
+return(<>
+</>)
 
-  
+}  
+
    
        
         return( <>
@@ -25,7 +31,7 @@ console.log(prop);
             <p>{prop.reviews}</p>
         </div>
         <div className="suboodhimagereview">
-            <img src='https://cdn-icons-png.flaticon.com/512/2919/2919906.png'></img>
+            <img src={prop.reviewsurl}></img>
         </div>
             
         

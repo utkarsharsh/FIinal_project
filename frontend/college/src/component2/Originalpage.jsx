@@ -49,6 +49,7 @@ function Orginpage() {
       console.log(imgforshow.image);
     }
   }
+  
 
   async function technewsapi() {
     let t = await axios.get(

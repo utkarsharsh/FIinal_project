@@ -98,9 +98,18 @@ var storage = multer.diskStorage({
     cb(null, file.originalname + "-" + Date.now());
   },
 });
+var storage1 = multer.diskStorage({
+    destination: (req, file, cb) => {
+      cb(null, "backend/uploads");
+    },
+    filename: (req, file, cb) => {
+      console.log(file);
+      cb(null, file.originalname + "-" + Date.now());
+    },
+  });
 
 var upload = multer({ storage: storage });
-
+var upload1 = multer({ storage: storage1 });
 const jwtSecretKey = process.env.SECRETKEY;
 
 const userinfo = mongoose.model("userinfo", kittySchema);
@@ -239,6 +248,7 @@ app.post("/others", upload.single("image"), async (req, res) => {
 });
 
 app.get("/suboodh", async (req, res) => {
+
   let totaluser = await userinfo.find();
   let p = [];
   totaluser.map((e) => {
@@ -251,7 +261,19 @@ app.get("/suboodh", async (req, res) => {
   res.send(p);
 });
 
-app.post("/suboodh", async (req, res) => {
+app.post("/suboodh",upload1.single("image"),async (req, res) => {
+  let eventurl = "";
+  console.log(req.body);
+  await cloudinary.uploader.upload(
+    req.file.path,
+    { public_id: req.body.name },
+    async function (error,result) {
+        console.log(result);
+      if(result.url){
+        eventurl=result.url;
+      }
+    }
+  );
   const user = await userinfo
     .findOneAndUpdate(
       { name: req.body.name },
@@ -259,22 +281,15 @@ app.post("/suboodh", async (req, res) => {
         $push: {
           suboodhreviews: {
             reviewstext: req.body.reviewstext,
-            reviewurl: "jai ho",
+            reviewurl : eventurl,
             names: req.body.name,
           },
         },
       }
     )
-    .then((response) => {
-      console.log(response);
-    });
-
-  const user2 = await userinfo.findOneAndUpdate(
-    { name: req.body.name },
-    {
-      suboodhrating: req.body.rating,
-    }
-  );
+    console.log(user);
+res.send("done");
+ 
 });
 
 // message work
